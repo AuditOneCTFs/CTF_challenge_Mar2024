@@ -13,8 +13,6 @@ The `Game.sol` contract runs a card battle game where the goal is to get the fla
 * A fight between two Avatars takes place with one of the 3 elements (FIRE, WATER, or AIR). The Avatar with the highest value in that element wins the fight. If two Avatars have the same strength, the Avatar with the most SPEED wins. If two Avatars are exactly the same, the flag holder wins.
 * A fight between two decks consists of pairing the three Avatars of the challenger with the three Avatars of the flag holder, pseudo-randomly choosing three elements, and then having the three pairs fight on each of these elements.
 
----
-
 ## Goal
 
 The `Game.sol` is deployed with the flagHolder holding an unbeatable deck with perfect Avatars.
