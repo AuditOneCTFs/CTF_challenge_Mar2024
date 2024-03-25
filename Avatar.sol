@@ -226,3 +226,5 @@ contract Game is ERC721 {
     }
 
 }
+
+// Credit: Hats Finance
