@@ -2,7 +2,7 @@
 
 ## Challenge Details
 
-The `Game.sol` contract runs a card battle game where the goal is to get the flag by pitching your deck of Avatars against the deck of the flagholder and win the fight. Here's how it works:
+The `Avatar.sol` contract runs a card battle game where the goal is to get the flag by pitching your deck of Avatars against the deck of the flagholder and win the fight. Here's how it works:
 
 * Anyone can join the game by calling `game.join()`
 * When you join, you get a deck of 3 pseudo-random Avatars.
@@ -15,6 +15,6 @@ The `Game.sol` contract runs a card battle game where the goal is to get the fla
 
 ## Goal
 
-The `Game.sol` is deployed with the flagHolder holding an unbeatable deck with perfect Avatars.
+The `Avatar.sol` is deployed with the flagHolder holding an unbeatable deck with perfect Avatars.
 
 Your mission is to obtain the flag: i.e. `game.flagHolder()` should return an address that you control
