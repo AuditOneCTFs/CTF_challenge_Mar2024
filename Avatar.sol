@@ -131,7 +131,7 @@ contract Game is ERC721 {
     }
   }
 
-  // put a avatar up for sale
+  // put an avatar up for sale
   function putUpForSale(uint256 _avatarId) external {
     require(ownerOf(_avatarId) == msg.sender, "Can only put your own avatars up for sale");
     forSale[_avatarId] = true;
@@ -143,8 +143,6 @@ contract Game is ERC721 {
     require(forSale[_avatarId2], "Cannot swap an avatar that is not for sale");
     require(swapper != _to, "Cannot swap a avatar with yourself");
 
-    // @audit Got side-effect in transfer if receiver is contract.
-    // Got reentrancy through side effect.
     _safeTransfer(swapper, _to, _avatarId1, "");
     _safeTransfer(_to, swapper, _avatarId2, "");
 
@@ -153,8 +151,6 @@ contract Game is ERC721 {
     uint256 idx2 = indexInDeck(_to, _avatarId2);
     decks[swapper][idx1] = _avatarId2;
     decks[_to][idx2] = _avatarId1;
-
-    // @audit forSale is not set to false after swap.
 
   }
 
